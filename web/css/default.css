@@ -238,7 +238,7 @@
 		display: inline-block;
 		margin-top: 2em;
 		padding: 1em 2em 1em 2em;
-		background: #00688b;
+		background: #0c438e;
 		border-radius: 30px;
 		letter-spacing: 0.20em;
 		text-decoration: none;
@@ -336,7 +336,7 @@
 	#header-wrapper
 	{
 		overflow: hidden;
-		background: #5F9EA0 url(images/bg.png) repeat;
+		background: #0d58bd url(images/bg.png) repeat;
 	}
 
 	#header
@@ -421,11 +421,11 @@
 	
 	#menu .current_page_item a
 	{
-		background: #00688b;
-		border: 1px solid #3d7f0b;
-		border-radius: 20px;
-	}
-	
+        background: #00688b;
+        border: 1px solid #3d7f0b;
+        border-radius: 20px;
+    }
+
 	#menu .icon
 	{
 	}

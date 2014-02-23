@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7888507b-60e8-4ba1-8c03-fefdd8487a56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Simple/UploadPicture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestApp.iml" afterPath="$PROJECT_DIR$/RestApp.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/default.css" afterPath="$PROJECT_DIR$/web/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user_profile.jsp" afterPath="$PROJECT_DIR$/web/user_profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RestApp.iws" />
@@ -73,23 +73,41 @@
       <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1082" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="469" max-vertical-offset="3105">
+            <state line="172" column="34" selection-start="4766" selection-end="4766" vertical-scroll-proportion="-7.3333335" vertical-offset="2404" max-vertical-offset="3105">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_profile.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user_profile.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/user_profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="265" column="27" selection-start="11528" selection-end="11528" vertical-scroll-proportion="1.9581006" vertical-offset="3274" max-vertical-offset="5700">
+            <state line="46" column="2" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-1.0833334" vertical-offset="664" max-vertical-offset="7575">
               <folding>
-                <marker date="1392556226667" expanded="true" signature="11874:11911" placeholder="SELECT * FRO..." />
-                <marker date="1392556226667" expanded="true" signature="12598:12635" placeholder="SELECT * FRO..." />
-                <marker date="1392556226667" expanded="true" signature="13052:13089" placeholder="SELECT * FRO..." />
-                <marker date="1392556226667" expanded="true" signature="13497:13534" placeholder="SELECT * FRO..." />
-                <marker date="1392556226667" expanded="true" signature="14699:14736" placeholder="SELECT * FRO..." />
+                <marker date="1392848566841" expanded="true" signature="12729:12766" placeholder="SELECT * FRO..." />
+                <marker date="1392848566841" expanded="true" signature="15368:15405" placeholder="SELECT * FRO..." />
+                <marker date="1392848566841" expanded="true" signature="15798:15835" placeholder="SELECT * FRO..." />
+                <marker date="1392848566841" expanded="true" signature="16219:16256" placeholder="SELECT * FRO..." />
+                <marker date="1392848566841" expanded="true" signature="17349:17386" placeholder="SELECT * FRO..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/info.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="120" selection-start="3767" selection-end="3767" vertical-scroll-proportion="0.9162011" vertical-offset="1007" max-vertical-offset="1455">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="privacy.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/privacy.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="31" selection-end="129" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="390">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,10 +115,8 @@
       <file leaf-file-name="UploadPicture.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Simple/UploadPicture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="92" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1275">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="26" column="92" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1275">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,7 +124,7 @@
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="35" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+            <state line="23" column="35" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="495">
               <folding />
             </state>
           </provider>
@@ -118,9 +134,7 @@
         <entry file="file://$PROJECT_DIR$/src/Simple/Login.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="26" column="122" selection-start="578" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1080">
-              <folding>
-                <marker date="1392157021122" expanded="true" signature="1072:1142" placeholder="SELECT * FRO..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,14 +158,15 @@
         <option value="$USER_HOME$/local/apache-tomcat-7.0.50/webapps/RestApp/info.html" />
         <option value="$USER_HOME$/local/apache-tomcat-7.0.50/webapps/RestApp/sitemap.html" />
         <option value="$PROJECT_DIR$/web/press.html" />
-        <option value="$PROJECT_DIR$/web/css/default.css" />
         <option value="$PROJECT_DIR$/src/Simple/Login.java" />
         <option value="$PROJECT_DIR$/web/new_user.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/signin.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/Simple/UploadPicture.java" />
+        <option value="$PROJECT_DIR$/web/css/default.css" />
         <option value="$PROJECT_DIR$/web/user_profile.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/info.html" />
       </list>
     </option>
   </component>
@@ -192,7 +207,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -212,6 +227,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -298,6 +314,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RestApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -322,7 +356,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,6 +380,7 @@
     <property name="FullScreen" value="false" />
     <property name="SearchEverywhereHistory" value="sysout" />
     <property name="LayoutCode.rearrangeEntriesJSP" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -733,10 +767,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.press.html (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Tomcat Server.user_profile.jsp" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.sitemap.html" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.info.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.info.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.press.html (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Tomcat Server.user_profile.jsp" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.sitemap.html" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -792,17 +826,32 @@
       <workItem from="1392216955191" duration="1245000" />
       <workItem from="1392275788184" duration="2440000" />
       <workItem from="1392541878895" duration="6096000" />
-      <workItem from="1392549411509" duration="6389000" />
+      <workItem from="1392549411509" duration="6452000" />
+      <workItem from="1392556811075" duration="98000" />
+      <workItem from="1392571330624" duration="26000" />
+      <workItem from="1392669978848" duration="1398000" />
+      <workItem from="1392671889283" duration="1031000" />
+      <workItem from="1392754946477" duration="522000" />
+      <workItem from="1392755900113" duration="3488000" />
+      <workItem from="1392816009006" duration="3410000" />
+      <workItem from="1392844005646" duration="1803000" />
+      <workItem from="1392846226185" duration="173000" />
+      <workItem from="1392847219620" duration="1378000" />
+      <workItem from="1393157807975" duration="3950000" />
     </task>
     <task id="LOCAL-00001" summary="DB">
       <created>1392277633801</created>
       <updated>1392277633801</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Upload Image not working">
+      <created>1392556725060</created>
+      <updated>1392556725060</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65164000" />
+    <option name="totallyTimeSpent" value="82504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="745" extended-state="6" />
@@ -819,7 +868,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39660493" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34876543" sideWeight="0.30600291" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34876543" sideWeight="0.30673498" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -829,8 +878,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23572475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34876543" sideWeight="0.6939971" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20058565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34876543" sideWeight="0.693265" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -851,7 +900,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB" />
+    <MESSAGE value="Upload Image not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload Image not working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -861,27 +911,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="960">
-          <folding>
-            <marker date="1392157021122" expanded="true" signature="1072:1142" placeholder="SELECT * FRO..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/aboutus.html">
@@ -891,9 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/user_profile.jsp">
@@ -926,9 +963,7 @@
     <entry file="file://$PROJECT_DIR$/src/Simple/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="960">
-          <folding>
-            <marker date="1392157021122" expanded="true" signature="1072:1142" placeholder="SELECT * FRO..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,9 +974,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/user_profile.jsp">
@@ -974,9 +1007,7 @@
     <entry file="file://$PROJECT_DIR$/src/Simple/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="960">
-          <folding>
-            <marker date="1392157021122" expanded="true" signature="1072:1142" placeholder="SELECT * FRO..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -987,9 +1018,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/user_profile.jsp">
@@ -1022,9 +1051,7 @@
     <entry file="file://$PROJECT_DIR$/src/Simple/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="960">
-          <folding>
-            <marker date="1392157021122" expanded="true" signature="1072:1142" placeholder="SELECT * FRO..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,9 +1062,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/user_profile.jsp">
@@ -1070,9 +1095,7 @@
     <entry file="file://$PROJECT_DIR$/src/Simple/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="960">
-          <folding>
-            <marker date="1392157021122" expanded="true" signature="1072:1142" placeholder="SELECT * FRO..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,14 +1106,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/privacy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554" />
+        <state line="4" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/terms.html">
@@ -1098,21 +1114,9 @@
         <state line="37" column="0" selection-start="2511" selection-end="2527" vertical-scroll-proportion="1.4026402" vertical-offset="130" max-vertical-offset="690" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/aboutus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="90" selection-start="3545" selection-end="4447" vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="945" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/press.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="100" selection-start="4165" selection-end="4165" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1605" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="423" column="27" selection-start="7728" selection-end="7728" vertical-scroll-proportion="0.0" vertical-offset="6193" max-vertical-offset="9330">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../localhost.sql">
@@ -1130,26 +1134,15 @@
         <state line="53" column="0" selection-start="1872" selection-end="3131" vertical-scroll-proportion="-3.125" vertical-offset="720" max-vertical-offset="5070" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1082" selection-end="1140" vertical-scroll-proportion="0.0" vertical-offset="469" max-vertical-offset="3105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Simple/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="122" selection-start="578" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="945">
-          <folding>
-            <marker date="1392157021122" expanded="true" signature="1072:1142" placeholder="SELECT * FRO..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,22 +1156,55 @@
     <entry file="file://$PROJECT_DIR$/src/Simple/UploadPicture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="92" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1275">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="428" column="28" selection-start="7819" selection-end="7819" vertical-scroll-proportion="0.0" vertical-offset="6193" max-vertical-offset="9330">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/user_profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="265" column="27" selection-start="11528" selection-end="11528" vertical-scroll-proportion="1.9581006" vertical-offset="3274" max-vertical-offset="5700">
+        <state line="46" column="2" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-1.0833334" vertical-offset="664" max-vertical-offset="7575">
           <folding>
-            <marker date="1392556226667" expanded="true" signature="11874:11911" placeholder="SELECT * FRO..." />
-            <marker date="1392556226667" expanded="true" signature="12598:12635" placeholder="SELECT * FRO..." />
-            <marker date="1392556226667" expanded="true" signature="13052:13089" placeholder="SELECT * FRO..." />
-            <marker date="1392556226667" expanded="true" signature="13497:13534" placeholder="SELECT * FRO..." />
-            <marker date="1392556226667" expanded="true" signature="14699:14736" placeholder="SELECT * FRO..." />
+            <marker date="1392848566841" expanded="true" signature="12729:12766" placeholder="SELECT * FRO..." />
+            <marker date="1392848566841" expanded="true" signature="15368:15405" placeholder="SELECT * FRO..." />
+            <marker date="1392848566841" expanded="true" signature="15798:15835" placeholder="SELECT * FRO..." />
+            <marker date="1392848566841" expanded="true" signature="16219:16256" placeholder="SELECT * FRO..." />
+            <marker date="1392848566841" expanded="true" signature="17349:17386" placeholder="SELECT * FRO..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/aboutus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="56" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.74860334" vertical-offset="47" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/privacy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="31" selection-end="129" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="172" column="34" selection-start="4766" selection-end="4766" vertical-scroll-proportion="-7.3333335" vertical-offset="2404" max-vertical-offset="3105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="120" selection-start="3767" selection-end="3767" vertical-scroll-proportion="0.9162011" vertical-offset="1007" max-vertical-offset="1455">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -170,7 +170,7 @@ Quisque lobortis.Phasellus pellentesque purus in massa.</p>
 	<div class="box3">
 		<ul class="style2">
 			<li><a href="terms.html">General conditions</a></li>
-			<li><a href="#">Information</a></li>
+			<li><a href="info.html">Information</a></li>
 		</ul>
 	</div>
 	<div class="box4">

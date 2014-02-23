@@ -179,6 +179,33 @@
         border: 1px solid orange;
     }
 
+    #Comments {
+        /* Give it a width */
+        display: inline-block;
+        width: 300px;
+
+        /* For visibility. Delete me */
+        border: 1px solid orange;
+    }
+
+    #Likes {
+        /* Give it a width */
+        display: inline-block;
+        width: 300px;
+
+        /* For visibility. Delete me */
+        border: 1px solid orange;
+    }
+
+    #Dislikes {
+        /* Give it a width */
+        display: inline-block;
+        width: 300px;
+
+        /* For visibility. Delete me */
+        border: 1px solid orange;
+    }
+
     #Info {
         width: 400px;
         text-align: center;
@@ -211,86 +238,179 @@
 </style>
 
 <div id="page-wrapper">
-    <div id="page" class="container">
-        <div id="ProfilePage">
-            <div id="LeftCol">
-                <div id="Photo">
-                    <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data" class="">
-                        <!-- Redirect browsers with JavaScript disabled to the origin page -->
-                        <noscript>&lt;input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"&gt;</noscript>
-                        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-                        <div class="fileupload-buttonbar">
-                            <div class="fileupload-buttons">
-                                <!-- The fileinput-button span is used to style the file input field as button -->
-            <span class="fileinput-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-plusthick"></span><span class="ui-button-text">
+<div id="page" class="container">
+<div id="ProfilePage">
+<div id="LeftCol">
+    <div id="Photo">
+        <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data"
+              class="">
+            <!-- Redirect browsers with JavaScript disabled to the origin page -->
+            <noscript>&lt;input type="hidden" name="redirect"
+                value="http://blueimp.github.io/jQuery-File-Upload/"&gt;</noscript>
+            <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+            <div class="fileupload-buttonbar">
+                <div class="fileupload-buttons">
+                    <!-- The fileinput-button span is used to style the file input field as button -->
+            <span class="fileinput-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
+                  role="button" aria-disabled="false"><span
+                    class="ui-button-icon-primary ui-icon ui-icon-plusthick"></span><span class="ui-button-text">
                 <span>Add files...</span>
 
             </span><input type="file" name="files[]" multiple=""></span>
-                                <button type="submit" class="start ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span class="ui-button-text">Start upload</span></button>
-                                <button type="reset" class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-cancel"></span><span class="ui-button-text">Cancel upload</span></button>
-                                <button type="button" class="delete ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-trash"></span><span class="ui-button-text">Delete</span></button>
-                                <input type="checkbox" class="toggle">
-                                <!-- The global file processing state -->
-                                <span class="fileupload-process"></span>
-                            </div>
-                            <!-- The global progress state -->
-                            <div class="fileupload-progress fade" style="display:none">
-                                <!-- The global progress bar -->
-                                <div class="progress ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="display: none; width: 0%;"></div></div>
-                                <!-- The extended global progress state -->
-                                <div class="progress-extended">&nbsp;</div>
-                            </div>
+                    <button type="submit"
+                            class="start ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
+                            role="button" aria-disabled="false"><span
+                            class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span
+                            class="ui-button-text">Start upload</span></button>
+                    <button type="reset"
+                            class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
+                            role="button" aria-disabled="false"><span
+                            class="ui-button-icon-primary ui-icon ui-icon-cancel"></span><span class="ui-button-text">Cancel upload</span>
+                    </button>
+                    <button type="button"
+                            class="delete ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
+                            role="button" aria-disabled="false"><span
+                            class="ui-button-icon-primary ui-icon ui-icon-trash"></span><span class="ui-button-text">Delete</span>
+                    </button>
+                    <input type="checkbox" class="toggle">
+                    <!-- The global file processing state -->
+                    <span class="fileupload-process"></span>
+                </div>
+                <!-- The global progress state -->
+                <div class="fileupload-progress fade" style="display:none">
+                    <!-- The global progress bar -->
+                    <div class="progress ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar"
+                         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="ui-progressbar-value ui-widget-header ui-corner-left"
+                             style="display: none; width: 0%;"></div>
+                    </div>
+                    <!-- The extended global progress state -->
+                    <div class="progress-extended">&nbsp;</div>
+                </div>
+            </div>
+            <!-- The table listing the files available for upload/download -->
+            <table role="presentation">
+                <tbody class="files">
+                <tr class="template-upload fade" style="">
+                    <td>
+                        <span class="preview"><canvas width="60" height="80"></canvas></span>
+                    </td>
+                    <td>
+                        <p class="name">DSC08289.JPG</p>
+                        <strong class="error"></strong>
+                    </td>
+                    <td>
+                        <p class="size">326.67 KB</p>
+
+                        <div class="progress ui-progressbar ui-widget ui-widget-content ui-corner-all"
+                             role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div class="ui-progressbar-value ui-widget-header ui-corner-left"
+                                 style="display: none; width: 0%;"></div>
                         </div>
-                        <!-- The table listing the files available for upload/download -->
-                        <table role="presentation"><tbody class="files"><tr class="template-upload fade" style="">
-                            <td>
-                                <span class="preview"><canvas width="60" height="80"></canvas></span>
-                            </td>
-                            <td>
-                                <p class="name">DSC08289.JPG</p>
-                                <strong class="error"></strong>
-                            </td>
-                            <td>
-                                <p class="size">326.67 KB</p>
-                                <div class="progress ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="display: none; width: 0%;"></div></div>
-                            </td>
-                            <td>
+                    </td>
+                    <td>
 
-                                <button class="start ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span class="ui-button-text">Start</span></button>
+                        <button class="start ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
+                                role="button" aria-disabled="false"><span
+                                class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span
+                                class="ui-button-text">Start</span></button>
 
 
-                                <button class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-cancel"></span><span class="ui-button-text">Cancel</span></button>
+                        <button class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
+                                role="button" aria-disabled="false"><span
+                                class="ui-button-icon-primary ui-icon ui-icon-cancel"></span><span
+                                class="ui-button-text">Cancel</span></button>
 
-                            </td>
-                        </tr></tbody></table>
-                    </form>
-                </div>
-                <div id="ProfileOptions">
-                    <%
-                        Class.forName("com.mysql.jdbc.Driver");
-                        con = DriverManager.getConnection("jdbc:mysql://localhost/getmoving", "root", "");
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div id="ProfileOptions">
+        <%
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/getmoving", "root", "");
 
-                        st = con.createStatement();
-                        query = "SELECT * FROM `user` WHERE `id_u`='1'";
-                        rs = st.executeQuery(query);
-                        if (rs.next()) {
-                            out.print(rs.getString("firstname") + " " + rs.getString("secondname"));
-                        }
-                    %>
-                </div>
-            </div>
+            st = con.createStatement();
+            query = "SELECT * FROM `user` WHERE `id_u`='1'";
+            rs = st.executeQuery(query);
+            if (rs.next()) {
+                out.print(rs.getString("firstname") + " " + rs.getString("secondname"));
+            }
+        %>
+    </div>
+</div>
 
-            <div id="Rating">
-                <p>
-                    <strong>Rating:</strong>
+<div id="Rating">
+    <p>
+        <strong>Rating:</strong>
 
-                <div class="rw-ui-container"></div>
-                </p>
-            </div>
+    <div class="rw-ui-container"></div>
+    </p>
+</div>
+<div id="accordion">
+    <h3>Section 1</h3>
+    <div>
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+        </p>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        <p>
+            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+        </p>
+        <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+    </div>
+    <h3>Section 4</h3>
+    <div>
+        <p>
+            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+            mauris vel est.
+        </p>
+        <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+        </p>
+    </div>
+</div>
+<div id="Comments">
+    <div id="lists" class="container">
+        <div id="offers_accordion">
+            <p class="list_title"> Last Comments </p>
 
-            <div id="Info">
-                <p>
-                    <strong>Gender:</strong>
+
+
+        </div>
+
+    </div>
+
+    <div id="Info">
+        <p>
+            <strong>Gender:</strong>
             <span>
                 <%
                     st = con.createStatement();
@@ -301,10 +421,10 @@
                     }
                 %>
             </span>
-                </p>
+        </p>
 
-                <p>
-                    <strong>Type of user:</strong>
+        <p>
+            <strong>Type of user:</strong>
             <span>
                 <%
                     st = con.createStatement();
@@ -315,10 +435,10 @@
                     }
                 %>
             </span>
-                </p>
+        </p>
 
-                <p>
-                    <strong>Birthday:</strong>
+        <p>
+            <strong>Birthday:</strong>
             <span>
                <%
                    st = con.createStatement();
@@ -329,28 +449,28 @@
                    }
                %>
             </span>
-                </p>
+        </p>
 
-                <p>
-                    <strong>Address:</strong>
+        <p>
+            <strong>Address:</strong>
             <span>
                 <form action="Address" method="POST">
                     <div><INPUT TYPE=TEXT NAME=addr SIZE=15> <br></div>
                     <INPUT TYPE=SUBMIT VALUE="Update your address">
                 </form>
             </span>
-                </p>
-                <p>
-                    <strong>Phone number:</strong>
+        </p>
+        <p>
+            <strong>Phone number:</strong>
             <span>
                 <form action="Phone" method="POST">
                     <div><INPUT TYPE=TEXT NAME=phone SIZE=15> <br></div>
                     <INPUT TYPE=SUBMIT VALUE="Update your phone no">
                 </form>
             </span>
-                </p>
-                <p>
-                    <strong>Email address:</strong>
+        </p>
+        <p>
+            <strong>Email address:</strong>
             <span>
                 <%
                     st = con.createStatement();
@@ -361,14 +481,20 @@
                     }
                 %>
             </span>
-                </p>
-            </div>
-
-            <!-- Needed because other elements inside ProfilePage have floats -->
-            <div style="clear:both"></div>
-        </div>
+        </p>
     </div>
+
+
+
+        <!-- Needed because other elements inside ProfilePage have floats -->
+        <div style="clear:both"></div>
+    </div>
+</div>
 </div>
 
 </body>
 </html>
+
+<SCRIPT>
+    $("#accordion").accordion();
+</SCRIPT>
