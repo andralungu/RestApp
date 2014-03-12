@@ -14,14 +14,7 @@
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>UploadPicture</servlet-name>
-        <servlet-class>Simple.UploadPicture</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>UploadPicture</servlet-name>
-        <url-pattern>/UploadPicture</url-pattern>
-    </servlet-mapping>
+
 </web-app>
 

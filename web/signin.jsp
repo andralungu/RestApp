@@ -93,7 +93,7 @@
 <h1> Sign up </h1>
 <h3> Your mobility issues. Solved </h3>
 
-<FORM METHOD=POST ACTION="new_user.jsp">	<%-- When a new user was successfully added, a relevant page is displayed--%>
+<FORM METHOD=POST>	<%-- When a new user was successfully added, a relevant page is displayed--%>
 <div style="float:left; width: 35%"> First Name </div> <div> <INPUT TYPE=TEXT NAME=firstname SIZE=20> <br> </div>
 <div style="float:left; width: 35%"> Second Name </div> <div> <INPUT TYPE=TEXT NAME=secondname SIZE=20> <br> </div>
 <div style="float:left; width: 35%"> Username </div> <div> <INPUT TYPE=TEXT NAME=username SIZE=20> <br> </div>
@@ -308,6 +308,11 @@ function calculate_age()
 	{
 		alert("You must be at least 16 years old to use this website! :(");
 	}
+    else {
+        document.forms[1].action="new_user.jsp";
+        document.forms[1].method="post";
+        document.forms[1].submit();
+    }
 }
 </script>
 

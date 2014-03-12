@@ -1,25 +1,176 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.io.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html style="width: 100%;height: 100%">
 
 <head>
-    <META charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <TITLE>GetMoving</TITLE>
     <LINK rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-    <SCRIPT src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <SCRIPT src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="css/ui-darkness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script>
+        $(function() {
 
+            $( "#accordion" ).accordion();
+            $( "#MoreAboutMe").accordion({ active: 2 });
+            $( "#More").accordion({ active: 2 });
+            $( "#More" ).accordion( "option", "collapsible", true );
+            $( "#MoreAboutMe" ).accordion( "option", "collapsible", true );
+            $( "#accordion" ).accordion( "option", "heightStyle", "content" );
+            $( "#More" ).accordion( "option", "heightStyle", "content" );
+            $( "#MoreAboutMe" ).accordion( "option", "heightStyle", "content" );
+
+
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $( "#autocomplete" ).autocomplete({
+                source: availableTags
+            });
+
+
+
+            $( "#button" ).button();
+            $( "#radioset" ).buttonset();
+
+
+
+            $( "#tabs" ).tabs();
+
+
+
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                width: 400,
+                buttons: [
+                    {
+                        text: "Ok",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    },
+                    {
+                        text: "Cancel",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                ]
+            });
+
+            // Link to open the dialog
+            $( "#dialog-link" ).click(function( event ) {
+                $( "#dialog" ).dialog( "open" );
+                event.preventDefault();
+            });
+
+
+
+            $( "#datepicker" ).datepicker({
+                inline: true
+            });
+
+
+
+            $( "#slider" ).slider({
+                range: true,
+                values: [ 17, 67 ]
+            });
+
+
+
+            $( "#progressbar" ).progressbar({
+                value: 20
+            });
+
+
+            // Hover states on the static widgets
+            $( "#dialog-link, #icons li" ).hover(
+                    function() {
+                        $( this ).addClass( "ui-state-hover" );
+                    },
+                    function() {
+                        $( this ).removeClass( "ui-state-hover" );
+                    }
+            );
+        });
+    </script>
+    <style>
+        body{
+            font: 62.5% "Trebuchet MS", sans-serif;
+            margin: 50px;
+        }
+        .demoHeaders {
+            margin-top: 2em;
+        }
+        #dialog-link {
+            padding: .4em 1em .4em 20px;
+            text-decoration: none;
+            position: relative;
+        }
+        #dialog-link span.ui-icon {
+            margin: 0 5px 0 0;
+            position: absolute;
+            left: .2em;
+            top: 50%;
+            margin-top: -8px;
+        }
+        #icons {
+            margin: 0;
+            padding: 0;
+        }
+        #icons li {
+            margin: 2px;
+            position: relative;
+            padding: 4px 0;
+            cursor: pointer;
+            float: left;
+            list-style: none;
+        }
+        #icons span.ui-icon {
+            float: left;
+            margin: 0 4px;
+        }
+        .fakewindowcontain .ui-widget-overlay {
+            position: absolute;
+        }
+    </style>
     <LINK href="css/default.css" rel="stylesheet" type="text/css"/>
 
     <LINK href="css/fonts.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.css">
-    <script src="assets/javascripts/jquery-1.11.0.min.js"></script>
+
 </head>
 
 <body style="width: 100%;height: 100%">
@@ -55,51 +206,10 @@
     s.parentNode.insertBefore(rw, s);
 }(document, new Date(), "script", "rating-widget.com/"));</script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="js/vendor/jquery.ui.widget.js"></script>
-<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="http://blueimp.github.io/JavaScript-Load-Image/js/load-image.min.js"></script>
-<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="http://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
-<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
-<!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
-<!-- The File Upload processing plugin -->
-<script src="js/jquery.fileupload-process.js"></script>
-<!-- The File Upload image preview & resize plugin -->
-<script src="js/jquery.fileupload-image.js"></script>
-
-<%-- jQuery script for uploading pictures --%>
 <script>
-    $('#fileupload').fileupload({
-        url: '//jquery-file-upload.appspot.com/',
-        dataType: 'json',
-        // Enable image resizing, except for Android and Opera,
-        // which actually support image resizing, but fail to
-        // send Blob objects via XHR requests:
-        disableImageResize: /Android(?!.*Chrome)|Opera/
-                .test(window.navigator && navigator.userAgent),
-        previewMaxWidth: 800,
-        previewMaxHeight: 800,
-        previewCrop: true // Force cropped images
-    }).on('fileuploadprocessalways', function (e, data) {
-        var index = data.index,
-                file = data.files[index],
-                node = $(data.context.children()[index]);
-        if (file.preview) {
-            node
-                    .prepend('<br/>')
-                    .prepend(file.preview)
-        }
-        if (file.error) {
-            node
-                    .append('<br/>')
-                    .append($('<span class="text-danger"/>').text(file.error));
-        }
-    });
+
 </script>
+
 
 
 <%!
@@ -133,25 +243,35 @@
     #ProfilePage {
         /* Move it off the top of the page, then centre it horizontally */
         margin: 50px auto;
-        width: 635px;
-
+        width: 935px;
+        height: 600px;
         /* For visibility. Delete me */
-        border: 1px solid red;
+        border: 1px solid black;
     }
 
     #LeftCol {
         /* Move it to the left */
         float: left;
 
-        width: 200px;
+        width: 400px;
         text-align: center;
 
         /* Move it away from the content */
         margin-right: 20px;
 
-        /* For visibility. Delete me */
-        border: 1px solid brown;
     }
+
+    #RightCol {
+        /* Move it to the left */
+
+        width: 500px;
+        text-align: center;
+
+        /* Move it away from the content */
+        margin-left: 420px;
+
+    }
+
 
     #Photo {
         /* Width and height of photo container */
@@ -159,15 +279,14 @@
         height: 200px;
 
         /* For visibility. Delete me */
-        border: 1px solid green;
+        border: 1px solid black;
     }
 
-    #PhotoOptions {
+    #ProfileOptions {
         text-align: center;
         width: 200px;
 
         /* For visibility. Delete me */
-        border: 1px solid brown;
     }
 
     #Rating {
@@ -176,34 +295,35 @@
         width: 300px;
 
         /* For visibility. Delete me */
-        border: 1px solid orange;
     }
 
     #Comments {
         /* Give it a width */
-        display: inline-block;
-        width: 300px;
+        display: block;
 
         /* For visibility. Delete me */
-        border: 1px solid orange;
+    }
+
+    #MoreAboutMe {
+        margin-top: 100px;
     }
 
     #Likes {
         /* Give it a width */
-        display: inline-block;
+        display: block;
         width: 300px;
 
         /* For visibility. Delete me */
-        border: 1px solid orange;
+        border: 1px solid black;
     }
 
     #Dislikes {
         /* Give it a width */
-        display: inline-block;
+        display: block;
         width: 300px;
 
         /* For visibility. Delete me */
-        border: 1px solid orange;
+        border: 1px solid #000000;
     }
 
     #Info {
@@ -214,7 +334,7 @@
         float: right;
 
         /* For visibility. Delete me */
-        border: 1px solid blue;
+        border: 1px solid black;
     }
 
     #Info strong {
@@ -223,16 +343,13 @@
         width: 100px;
 
         /* For visibility. Delete me */
-        border: 1px solid orange;
+        border: 1px solid black;
     }
 
     #Info span {
         /* Give it a width */
         display: inline-block;
         width: 250px;
-
-        /* For visibility. Delete me */
-        border: 1px solid purple;
     }
 
 </style>
@@ -242,179 +359,84 @@
 <div id="ProfilePage">
 <div id="LeftCol">
     <div id="Photo">
-        <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data"
-              class="">
-            <!-- Redirect browsers with JavaScript disabled to the origin page -->
-            <noscript>&lt;input type="hidden" name="redirect"
-                value="http://blueimp.github.io/jQuery-File-Upload/"&gt;</noscript>
-            <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-            <div class="fileupload-buttonbar">
-                <div class="fileupload-buttons">
-                    <!-- The fileinput-button span is used to style the file input field as button -->
-            <span class="fileinput-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
-                  role="button" aria-disabled="false"><span
-                    class="ui-button-icon-primary ui-icon ui-icon-plusthick"></span><span class="ui-button-text">
-                <span>Add files...</span>
+        <%
+            Cookie[] cookies=request.getCookies();
+            String cookieName = "user";
+            Cookie myCookie = null;
+            if (cookies != null)
+            {
+                for (int i = 0; i < cookies.length; i++)
+                {
+                    if (cookies [i].getName().equals (cookieName))
+                    {
+                        myCookie = cookies[i];
+                        break;
+                    }
+                }
+            }
+            System.out.println(myCookie.getValue());
+            ServletContext context = request.getServletContext();
+            String fullPath = context.getRealPath("/assets/images");
+            File photo = new File(fullPath+File.separator+myCookie.getValue()+".jpg");
+            if (photo.exists()) {
+                out.print("<img style=\"width:202px; height:202px\" src="+"assets/images/"+myCookie.getValue()+".jpg"+" alt=\"MD Logo\" />");
+            }else {
+                out.print("<form id=\"form_upload\" method=\"POST\" action=\"UploadFileServlet\" enctype=\"multipart/form-data\" >\n" +
+                        "            File: <br>\n" +
+                        "            <input type=\"file\" name=\"file\" id=\"file\" /> <br>\n" +
+                        "            <br>\n" +
+                        "            <input type=\"submit\" value=\"Upload\" name=\"upload\" id=\"upload\" />\n" +
+                        "        </form>");
+            }
+        %>
 
-            </span><input type="file" name="files[]" multiple=""></span>
-                    <button type="submit"
-                            class="start ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
-                            role="button" aria-disabled="false"><span
-                            class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span
-                            class="ui-button-text">Start upload</span></button>
-                    <button type="reset"
-                            class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
-                            role="button" aria-disabled="false"><span
-                            class="ui-button-icon-primary ui-icon ui-icon-cancel"></span><span class="ui-button-text">Cancel upload</span>
-                    </button>
-                    <button type="button"
-                            class="delete ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
-                            role="button" aria-disabled="false"><span
-                            class="ui-button-icon-primary ui-icon ui-icon-trash"></span><span class="ui-button-text">Delete</span>
-                    </button>
-                    <input type="checkbox" class="toggle">
-                    <!-- The global file processing state -->
-                    <span class="fileupload-process"></span>
-                </div>
-                <!-- The global progress state -->
-                <div class="fileupload-progress fade" style="display:none">
-                    <!-- The global progress bar -->
-                    <div class="progress ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar"
-                         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                        <div class="ui-progressbar-value ui-widget-header ui-corner-left"
-                             style="display: none; width: 0%;"></div>
-                    </div>
-                    <!-- The extended global progress state -->
-                    <div class="progress-extended">&nbsp;</div>
-                </div>
-            </div>
-            <!-- The table listing the files available for upload/download -->
-            <table role="presentation">
-                <tbody class="files">
-                <tr class="template-upload fade" style="">
-                    <td>
-                        <span class="preview"><canvas width="60" height="80"></canvas></span>
-                    </td>
-                    <td>
-                        <p class="name">DSC08289.JPG</p>
-                        <strong class="error"></strong>
-                    </td>
-                    <td>
-                        <p class="size">326.67 KB</p>
-
-                        <div class="progress ui-progressbar ui-widget ui-widget-content ui-corner-all"
-                             role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                            <div class="ui-progressbar-value ui-widget-header ui-corner-left"
-                                 style="display: none; width: 0%;"></div>
-                        </div>
-                    </td>
-                    <td>
-
-                        <button class="start ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
-                                role="button" aria-disabled="false"><span
-                                class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span
-                                class="ui-button-text">Start</span></button>
-
-
-                        <button class="cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
-                                role="button" aria-disabled="false"><span
-                                class="ui-button-icon-primary ui-icon ui-icon-cancel"></span><span
-                                class="ui-button-text">Cancel</span></button>
-
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </form>
     </div>
     <div id="ProfileOptions">
+        <h3>
         <%
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/getmoving", "root", "");
 
             st = con.createStatement();
-            query = "SELECT * FROM `user` WHERE `id_u`='1'";
+            if (cookies != null)
+            {
+                for (int i = 0; i < cookies.length; i++)
+                {
+                    if (cookies [i].getName().equals (cookieName))
+                    {
+                        myCookie = cookies[i];
+                        break;
+                    }
+                }
+            }
+            System.out.print(myCookie.getValue());
+            query = "SELECT * FROM `user` WHERE `username` like '"+myCookie.getValue()+"'";
             rs = st.executeQuery(query);
             if (rs.next()) {
                 out.print(rs.getString("firstname") + " " + rs.getString("secondname"));
             }
         %>
+        </h3>
     </div>
-</div>
-
-<div id="Rating">
-    <p>
-        <strong>Rating:</strong>
-
-    <div class="rw-ui-container"></div>
-    </p>
-</div>
-<div id="accordion">
-    <h3>Section 1</h3>
-    <div>
-        <p>
-            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-        </p>
-    </div>
-    <h3>Section 2</h3>
-    <div>
-        <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
-        </p>
-    </div>
-    <h3>Section 3</h3>
-    <div>
-        <p>
-            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-        </p>
-        <ul>
-            <li>List item one</li>
-            <li>List item two</li>
-            <li>List item three</li>
-        </ul>
-    </div>
-    <h3>Section 4</h3>
-    <div>
-        <p>
-            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-            mauris vel est.
-        </p>
-        <p>
-            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
-        </p>
-    </div>
-</div>
-<div id="Comments">
-    <div id="lists" class="container">
-        <div id="offers_accordion">
-            <p class="list_title"> Last Comments </p>
-
-
-
-        </div>
-
-    </div>
-
     <div id="Info">
         <p>
             <strong>Gender:</strong>
             <span>
                 <%
                     st = con.createStatement();
-                    query = "SELECT * FROM `user` WHERE `id_u`='1'";
+                    if (cookies != null)
+                    {
+                        for (int i = 0; i < cookies.length; i++)
+                        {
+                            if (cookies [i].getName().equals (cookieName))
+                            {
+                                myCookie = cookies[i];
+                                break;
+                            }
+                        }
+                    }
+                    System.out.print(myCookie.getValue());
+                    query = "SELECT * FROM `user` WHERE `username` like '"+myCookie.getValue()+"'";
                     rs = st.executeQuery(query);
                     if (rs.next()) {
                         out.print(rs.getString("gender"));
@@ -428,7 +450,19 @@
             <span>
                 <%
                     st = con.createStatement();
-                    query = "SELECT * FROM `user` WHERE `id_u`='1'";
+                    if (cookies != null)
+                    {
+                        for (int i = 0; i < cookies.length; i++)
+                        {
+                            if (cookies [i].getName().equals (cookieName))
+                            {
+                                myCookie = cookies[i];
+                                break;
+                            }
+                        }
+                    }
+                    System.out.print(myCookie.getValue());
+                    query = "SELECT * FROM `user` WHERE `username` like '"+myCookie.getValue()+"'";
                     rs = st.executeQuery(query);
                     if (rs.next()) {
                         out.print(rs.getString("type"));
@@ -442,7 +476,19 @@
             <span>
                <%
                    st = con.createStatement();
-                   query = "SELECT * FROM `user` WHERE `id_u`='1'";
+                   if (cookies != null)
+                   {
+                       for (int i = 0; i < cookies.length; i++)
+                       {
+                           if (cookies [i].getName().equals (cookieName))
+                           {
+                               myCookie = cookies[i];
+                               break;
+                           }
+                       }
+                   }
+                   System.out.print(myCookie.getValue());
+                   query = "SELECT * FROM `user` WHERE `username` like '"+myCookie.getValue()+"'";
                    rs = st.executeQuery(query);
                    if (rs.next()) {
                        out.print(rs.getString("bmonth") + "/" + rs.getString("bday") + "/" + rs.getString("byear"));
@@ -474,7 +520,19 @@
             <span>
                 <%
                     st = con.createStatement();
-                    query = "SELECT * FROM `user` WHERE `id_u`='1'";
+                    if (cookies != null)
+                    {
+                        for (int i = 0; i < cookies.length; i++)
+                        {
+                            if (cookies [i].getName().equals (cookieName))
+                            {
+                                myCookie = cookies[i];
+                                break;
+                            }
+                        }
+                    }
+                    System.out.print(myCookie.getValue());
+                    query = "SELECT * FROM `user` WHERE `username` like '"+myCookie.getValue()+"'";
                     rs = st.executeQuery(query);
                     if (rs.next()) {
                         out.print(rs.getString("username"));
@@ -486,15 +544,125 @@
 
 
 
-        <!-- Needed because other elements inside ProfilePage have floats -->
-        <div style="clear:both"></div>
+    <!-- Needed because other elements inside ProfilePage have floats -->
+    <div style="clear:both"></div>
+</div>
+    <div id="RightCol">
+        <div id="Rating">
+            <p>
+                <strong>Rating:</strong>
+
+            <div class="rw-ui-container"></div>
+            </p>
+        </div>
+        <div id="Comments">
+            <h3> Last Comments </h3>
+
+                    <div id="accordion">
+                        <%
+                            st = con.createStatement();
+                            if (cookies != null)
+                            {
+                                for (int i = 0; i < cookies.length; i++)
+                                {
+                                    if (cookies [i].getName().equals (cookieName))
+                                    {
+                                        myCookie = cookies[i];
+                                        break;
+                                    }
+                                }
+                            }
+                            System.out.print(myCookie.getValue());
+                            query = "SELECT * FROM `user` u1,`user` u2,`comments` WHERE u1.`username` like '"+myCookie.getValue()+"' and u1.`id`=`id_user2` and u2.`id`=`id_user1`";
+                            rs = st.executeQuery(query);
+                            if (rs.next()){
+                                out.print("<h3>"+rs.getString("u2.firstname")+" "+rs.getString("u2.secondname")+"</h3>");
+                                out.print("<div>"+rs.getString("comment")+"</div>");
+                                while (rs.next()) {
+                                    out.print("<h3>"+rs.getString("u2.firstname")+" "+rs.getString("u2.secondname")+"</h3>");
+                                    out.print("<div>"+rs.getString("comment")+"</div>");
+                                }
+                            }
+                            else {
+                                out.print("<h3>User1</h3>\n" +
+                                        "                        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>\n" +
+                                        "                        <h3>User2</h3>\n" +
+                                        "                        <div>Phasellus mattis tincidunt nibh.</div>\n" +
+                                        "                        <h3>User3</h3>\n" +
+                                        "                        <div>Nam dui erat, auctor a, dignissim quis.</div>");
+                            }
+                        %>
+
+                    </div>
+
+        </div>
+        <div id="MoreAboutMe">
+            <h3>MoreAboutMe</h3>
+            <div id="More">
+            <h3>Likes</h3>
+                <%
+                    st = con.createStatement();
+                    if (cookies != null)
+                    {
+                        for (int i = 0; i < cookies.length; i++)
+                        {
+                            if (cookies [i].getName().equals (cookieName))
+                            {
+                                myCookie = cookies[i];
+                                break;
+                            }
+                        }
+                    }
+                    System.out.print(myCookie.getValue());
+                    query = "SELECT * FROM `user` u,`likes` WHERE u.`username` like '"+myCookie.getValue()+"' and u.`id`=`id_user`";
+                    rs = st.executeQuery(query);
+                    if (rs.next()){
+                        out.print("<div>"+rs.getString("like"));
+                        while (rs.next()) {
+                            out.print(", "+rs.getString("like"));
+                        }
+                        out.print("</div>");
+                    }
+                    else {
+                        out.print("<div>Phasellus mattis tincidunt nibh.</div>");
+                    }
+                %>
+            <h3>Dislikes</h3>
+                <%
+                    st = con.createStatement();
+                    if (cookies != null)
+                    {
+                        for (int i = 0; i < cookies.length; i++)
+                        {
+                            if (cookies [i].getName().equals (cookieName))
+                            {
+                                myCookie = cookies[i];
+                                break;
+                            }
+                        }
+                    }
+                    System.out.print(myCookie.getValue());
+                    query = "SELECT * FROM `user` u,`dislikes` WHERE u.`username` like '"+myCookie.getValue()+"' and u.`id`=`id_user`";
+                    rs = st.executeQuery(query);
+                    if (rs.next()){
+                        out.print("<div>"+rs.getString("dislike"));
+                        while (rs.next()) {
+                            out.print(", "+rs.getString("dislike"));
+                        }
+                        out.print("</div>");
+                    }
+                    else {
+                        out.print("<div>Nam dui erat, auctor a, dignissim quis.</div>");
+                    }
+                %>
+            </div>
+        </div>
     </div>
+
 </div>
 </div>
 
+
+</div>
 </body>
 </html>
-
-<SCRIPT>
-    $("#accordion").accordion();
-</SCRIPT>

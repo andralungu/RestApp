@@ -3,6 +3,7 @@ package Simple;
 import Simple.Encryption;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,11 +46,18 @@ public class Login extends HttpServlet {
 				to the landing page to try his/her credentials one more time or to sign up. */
             if (rs.next()) paroladb=rs.getString("password");
             if (paroladb.equals(parola)) {
-            	request.getRequestDispatcher("user_profile.jsp").forward(request, response);
+                /*
+                When I login with the current user I save the username into a cookie in order to use it later to
+                            display home page
+                 */
+                Cookie cookie = new Cookie("user",username);
+                cookie.setMaxAge(60*60); //1 hour
+                response.addCookie(cookie);
+            	response.sendRedirect("user_profile.jsp");
             }
             else {
                 System.out.println(parola+" "+paroladb);
-               	request.getRequestDispatcher("index.jsp").forward(request, response);
+               	response.sendRedirect("index.jsp");
             }
 
         } catch (Exception e) {

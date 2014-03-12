@@ -50,14 +50,9 @@
     int today_day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
 
     int birth_year=0, birth_month=0, birth_day=0;
-
-    query = "SELECT * FROM `user` WHERE `id_u`='1'";
-    rs = st.executeQuery(query);
-    if(rs.next()) {
-        birth_year = rs.getInt("byear");
-        birth_month = rs.getInt("bmonth");
-        birth_day = rs.getInt("bday");
-    }
+    birth_year = Integer.parseInt(request.getParameter("DateOfBirth_Year"));
+    birth_month = Integer.parseInt(request.getParameter("DateOfBirth_Month"));
+    birth_day = Integer.parseInt(request.getParameter("DateOfBirth_Day"));
 
     age = today_year-birth_year;
     if ( today_month < (birth_month - 1))
