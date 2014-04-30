@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Login extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -19,6 +21,8 @@ public class Login extends HttpServlet {
     String query;
     String parola;
     String username;
+    String firstname;
+    String secondname;
     ResultSet rs;
 
     public Login() {
@@ -30,14 +34,12 @@ public class Login extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/getmoving", "root", "");
             st = con.createStatement();
-            System.out.println("To out-put All the request-attributes received from request - ");
-
-
+            firstname = request.getParameter("firstname");
+            secondname = request.getParameter("secondname");
             username = request.getParameter("user");
+
             query = "SELECT * FROM `user` WHERE `username`='"+ username +"'"+" AND `id_u`>2";
             parola = (String) request.getParameter("passwd");
-            System.out.println(parola);
-            System.out.println(username);
             parola = Encryption.crypt(parola);
             String paroladb="";
             rs = st.executeQuery(query);
